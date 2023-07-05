@@ -1,0 +1,35 @@
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin deteskop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin code {
+  @content;
+}
+
+$colors: (
+  'primary': #f8d24e,
+  'button_advantages': #000000,
+  'text': #fcfcfc,
+  'background': #84a178,
+  'body': #131313,
+  'hr-dots': #d9d9d9,
+  'background_address': #ffffff,
+  'time-color': #ababab,
+  'modal_franhise': #f8d24e1a,
+  'modal_product': #9cbe8f,
+  'modal_buy': #efd478,
+  'modal_buy-ice': #96af8c,
+  'background-products_milkshakes': #d6936d,
+  'background-products_ice cream': #aec6a5,
+  'mobileMenu': #85a279,
+  'border_footer': #e1e1e1,
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
