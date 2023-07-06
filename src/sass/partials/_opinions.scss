@@ -1,0 +1,104 @@
+@import '../mixin';
+@import '../setup';
+
+.swiper {
+  max-width: 480px;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+  height: 600px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination-bullet {
+  background: map-get($colors, 'background');
+}
+.opinions {
+  &__gallery {
+    width: 450px;
+    height: 400px;
+    background: url(../images/gallery/photo-1-480@x1.png),
+      lightgray -22.284px -61.252px / 112.943% 160.051% no-repeat;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  &__paragraph {
+    max-width: 280px;
+    @include tablet {
+      max-width: 705px;
+    }
+    @include desktop {
+      max-width: 968px;
+    }
+    border-radius: 10px;
+    background: map-get($colors, 'background');
+    padding: 35px 39px;
+    @include tablet {
+      padding: 28px 80px;
+    }
+    @include desktop {
+      padding: 43px 109px;
+    }
+    color: map-get($colors, 'text');
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 255%;
+    @include tablet {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 186%;
+      letter-spacing: 0.56px;
+    }
+    @include desktop {
+      font-size: 16px;
+      letter-spacing: 0.64px;
+    }
+  }
+  &__picture1 {
+    width: 85px;
+    height: 85px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+  }
+  &__picture2 {
+    width: 97px;
+    height: 91px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+  }
+  &__picture3 {
+    width: 91px;
+    height: 94px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+  }
+  &__header {
+    color: map-get($colors, 'body');
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 186%;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+}
