@@ -1,6 +1,8 @@
+@import './mixin';
+
 body {
   font-size: 14px;
-  color: #131313;
+  color: map-get($colors, 'body');
   font-family: DM Sans, Seymour One, Montserrat;
 }
 
@@ -36,4 +38,15 @@ address {
 .conteiner {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.container {
+  max-width: 480px;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+  margin: 0 auto;
+  padding: 0 15px;
 }
