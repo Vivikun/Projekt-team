@@ -9,13 +9,11 @@
   @include desktop {
     max-width: 1200px;
   }
-  height: 600px;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,12 +22,8 @@
   background: map-get($colors, 'background');
 }
 .opinions {
-  &__gallery {
-    width: 450px;
-    height: 400px;
-    background: url(../images/gallery/photo-1-480@x1.png),
-      lightgray -22.284px -61.252px / 112.943% 160.051% no-repeat;
-  }
+  background-color: transparent;
+  margin-bottom: 60px;
   &__list {
     display: flex;
     flex-direction: column;
