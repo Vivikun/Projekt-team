@@ -1,0 +1,127 @@
+.header {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+&__list {
+
+display: none;
+
+@include desktop {
+    display: flex;
+    flex-direction: row;
+    color:  #FCFCFC;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    gap: 28px; 
+}
+}
+
+&__button {
+
+    display: none;
+
+    @include tablet {
+
+    display: flex;
+    border-radius: 10px;
+    background-color: #F8D24E;
+    padding: 12px 35px 12px 36px;
+    border: none;
+    margin-right: 16px;
+
+    &__btn-name {
+        
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+               
+    }
+    }
+}
+}
+
+
+.header2 {
+    display: flex;
+    text-align: left;
+
+    @include desktop {
+    display: flex;
+    justify-content: space-between;
+    }
+
+    &__title {
+        color: #FCFCFC;
+        font-family: Seymour One;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 1.04px;
+        text-transform: uppercase;
+        padding: 0 0 28px 20px;
+        text-align: left;
+    
+        @include desktop {
+        
+        font-size: 38px;
+        font-weight: 400;
+    
+    }
+    }
+    &__list {
+
+        display: none;
+    
+        @include desktop {
+
+        display: flex;
+        flex-direction: column;
+        }
+    }
+    &__number {
+        color: #131313;
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        padding-right: 16px;
+    }
+    &__item {
+        color: #FCFCFC;
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-right: 16px;
+    }
+    &__text {
+
+        display: none;
+
+        @include tablet {
+
+        display: flex;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        padding: 46px 387px 69px 216px;
+    }
+        @include desktop {
+            font-size: 14px;
+            padding: 111px 743px 143px 257px;
+    }
+    }
+}
+ 
