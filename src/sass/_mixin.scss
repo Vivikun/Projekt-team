@@ -33,3 +33,8 @@ $colors: (
 @function getColor($key) {
   @return map-get($colors, $key);
 }
+@mixin font($fw, $fsi, $lh) {
+  font-weight: $fw;
+  font-size: $fsi;
+  line-height: $lh;
+}
