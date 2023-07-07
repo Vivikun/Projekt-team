@@ -1,0 +1,132 @@
+@import '../mixin';
+@import '../setup';
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: Montserrat;
+  max-width: 480px;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+.grid-container {
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+  grid-template-columns: 280px;
+  grid-template-rows: 412px 412px 412px;
+  @include tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.item {
+  border-radius: 24px;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  max-width: 100%;
+  background: #fcfcfc;
+  text-align: left;
+  box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
+}
+.contacts {
+  max-width: 100%;
+  margin: 0 auto;
+
+  &__title {
+    display: none;
+  }
+
+  &__name {
+    color: #131313;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.48px;
+    line-height: 120%;
+    justify-content: center;
+    align-content: center;
+    text-transform: uppercase;
+    padding: 4px 22px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #f8d24e;
+    text-align: center;
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    padding-bottom: 24px;
+    gap: 8px;
+    color: #d6936d;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 183%;
+    letter-spacing: 0.48px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  &__schedule {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 186%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  &__links {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #131313;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+  }
+  .city {
+    color: #131313;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 186%;
+    letter-spacing: 0.48px;
+  }
+  .days {
+    color: #131313;
+  }
+  .hours {
+    color: #ababab;
+  }
+}
+
+.contacts-btn {
+  display: block;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: inherit;
+  border-radius: 10px;
+  color: #131313;
+  background-color: #f8d24e;
+  margin: 0 auto;
+  padding: 12px 34px;
+  &__text {
+    color: #131313;
+    text-align: center;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  &__append {
+    max-width: 12px;
+  }
+}
