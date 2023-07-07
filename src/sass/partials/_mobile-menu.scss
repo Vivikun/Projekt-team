@@ -1,0 +1,56 @@
+.menu-container.is-open {
+    transform: translateX(0);
+}
+.menu-container {
+    background-color: #84A178;
+    font-family: Montserrat;
+    font-size: 32px;
+    position: fixed;
+    inset: 0;
+    padding: 48px 0 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100%);
+    transition: transform 250ms ease;
+    &__close-btn {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 21px;
+        right: 21px;
+    }
+    &__icon-btn {
+        fill: #FCFCFC;
+    }
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    &__link {
+        color:#FCFCFC;
+        font-style: normal;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+        &:hover,
+        &:focus{
+            color: #131313;
+        }
+    }
+}
+.toggle-btn {
+    background-color: transparent;
+    border:none;
+    align-content: end;
+   
+    @include desktop {
+      display: none;
+    }
+    &__icon {
+      fill: #FFFFFF;
+      }
+    }
+  

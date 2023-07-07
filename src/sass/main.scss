@@ -4,5 +4,18 @@
  */
 
 // Style dla pliku z przykładem HTML fragmentu
+<<<<<<< Updated upstream
 @import './example';
 @import './partials/header' ;
+=======
+@import './partials/products';
+@import './mixin';
+@import './setup';
+@import './utils/var';
+@import './partials/modal-franchise';
+@import './partials/modal-location';
+@import './partials/modal-franchise';
+@import './partials/opinions';
+@import './partials/header' ;
+@import './partials/mobile-menu' ;
+>>>>>>> Stashed changes
