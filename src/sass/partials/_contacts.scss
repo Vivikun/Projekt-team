@@ -22,6 +22,7 @@
   grid-template-rows: 412px 412px 412px;
   @include tablet {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 412px;
   }
 }
 .item {
@@ -80,16 +81,18 @@
     border-bottom: 1px solid #e1e1e1;
   }
   &__links {
-    text-decoration: none;
     padding-top: 24px;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    color: #131313;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 160%;
+  }
+  &__links a {
+    text-decoration: none;
+    color: inherit;
   }
   .city {
     color: #131313;
@@ -112,7 +115,6 @@
   padding-top: 24px;
   gap: 16px;
   @include tablet {
-    justify-content: center;
     flex-direction: row;
     padding-top: 40px;
   }
