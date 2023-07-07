@@ -1,18 +1,24 @@
+<!-- <button type="button" class="submit-button" data-modal-open="">LOL</button> -->
+
 <div class="modal-container is-hidden" data-modal>
   <div class="franchise-container">
-    <button type="button" class="franchise-button__close" data-modal-close>X</button>
+    <button type="button" class="franchise-button__close" data-modal-close>
+      <svg width="24" height="24" class="modal-him__button--icon">
+        <use href="./images/icons-svg.svg#icon-close-black"></use>
+      </svg>
+    </button>
     <div class="franchise__title">
       <h2 class="franchise__title--font">
         Thank you for your interest in owning an Ice Cream shop
       </h2>
     </div>
     <div class="franchise__describe">
-      <span class="franchise__describe--text"
-        >Due to the overwhelming volume of franchise requests we are not accepting new franchisee
+      <p class="franchise__describe--text">
+        Due to the overwhelming volume of franchise requests we are not accepting new franchisee
         applications at this time. Once the application process resumes, we will contact you for
         further information. Please fill out the contact information below and we will reach out for
-        additional information. We appreciate your patience.</span
-      >
+        additional information. We appreciate your patience.
+      </p>
     </div>
 
     <form class="franchise-modal">
@@ -49,6 +55,7 @@
         <textarea
           class="franchise-modal__input--comment"
           name="comment"
+          rows="6"
           placeholder="Comment"
         ></textarea>
       </label>
