@@ -18,6 +18,9 @@
   justify-content: center;
   align-items: center;
 }
+.swiper-pagination {
+  position: relative;
+}
 .swiper-pagination-bullet {
   background: map-get($colors, 'background');
 }
@@ -93,6 +96,16 @@
     line-height: 186%;
     @include tablet {
       font-size: 16px;
+    }
+    margin-bottom: 32px;
+  }
+  &__gallery {
+    margin-bottom: 48px;
+    @include tablet {
+      margin-bottom: 68px;
+    }
+    @include desktop {
+      margin-bottom: 108px;
     }
   }
 }
