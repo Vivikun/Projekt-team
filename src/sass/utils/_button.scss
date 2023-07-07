@@ -1,0 +1,87 @@
+.contacts-btn {
+  width: 196px;
+  height: 42px;
+  color: getColor('body');
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.1;
+  border-radius: 10px;
+  background: getColor('primary');
+  border: none;
+  cursor: pointer;
+  transition-property: color, background;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    color: #000000;
+    background: #0a8817;
+  }
+  &:focus {
+    color: #ffffff;
+    background: #0a8817;
+  }
+  &:disabled {
+    color: #131313;
+    background: #ababab;
+  }
+}
+
+.contacts-btn-2 {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+  display: flex;
+  width: 196px;
+  height: 42px;
+  border-radius: 10px;
+  border: 2px solid #f8d24e;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  transition-property: color, background;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    border-color: #0a8817;
+  }
+  &:focus {
+    color: #ffffff;
+    border-color: #0a8817;
+  }
+  &:disabled {
+    border-color: #ababab;
+  }
+}
+
+.header__button {
+  color: #f8d24e;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: underline;
+  background: none;
+  border: none;
+  transition-property: color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    color: #0a8817;
+  }
+  &:focus {
+    color: #ffffff;
+  }
+  &:disabled {
+    color: #ababab;
+  }
+}
