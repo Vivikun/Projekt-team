@@ -4,6 +4,8 @@ body {
   font-size: 14px;
   color: map-get($colors, 'body');
   font-family: Montserrat, sans-serif;
+  font-family: DM Sans, Seymour One, Montserrat;
+  background-color: map-get($colors, 'background');
 }
 
 h1,
