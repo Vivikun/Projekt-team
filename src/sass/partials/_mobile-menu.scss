@@ -1,0 +1,43 @@
+.menu-container.is-open {
+    transform: translateX(0);
+}
+.menu-container {
+    background-color:  #85A279;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100%);
+    transition: transform 250ms ease;
+    
+    &__close-btn {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 21px;
+        right: 21px;
+    }
+    &__icon-btn {
+        fill: #FCFCFC;
+    }
+        }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    &__link {
+        color: #FCFCFC;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        &:hover,
+        &:focus{
+            color:#131313;
+        }
+    }
+}
