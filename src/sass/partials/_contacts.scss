@@ -6,6 +6,7 @@
   padding: 0 20px;
   font-family: Montserrat;
   max-width: 480px;
+
   @include tablet {
     max-width: 768px;
   }
@@ -79,6 +80,7 @@
     border-bottom: 1px solid #e1e1e1;
   }
   &__links {
+    text-decoration: none;
     padding-top: 24px;
     display: flex;
     flex-direction: column;
@@ -104,7 +106,21 @@
     color: #ababab;
   }
 }
-
+.buttons {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  gap: 16px;
+  @include tablet {
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 40px;
+  }
+  @include desktop {
+    justify-content: center;
+    padding-top: 60px;
+  }
+}
 .contacts-btn {
   display: block;
   cursor: pointer;
