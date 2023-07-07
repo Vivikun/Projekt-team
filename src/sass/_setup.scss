@@ -36,6 +36,13 @@ address {
 }
 
 .container {
+textarea,
+input {
+  border-radius: 10px;
+  border: 1px solid #84a178;
+  background: rgba(248, 210, 78, 0.1);
+}
+.conteiner {
   padding-top: 60px;
   padding-bottom: 60px;
 }
