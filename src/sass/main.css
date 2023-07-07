@@ -43,4 +43,41 @@ address {
 .conteiner {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+footer {
+  min-width: 320px;
+  max-width: 1200px;
+  width: 100vw;
+  height: 1487px;
+  flex-shrink: 0;
+  background: #84a178;
+}
+
+.footer_container {
+  display: block;
+}
+.footer_container__item {
+  display: flex;
+  width: 100%;
+}
+.footer_container__item--motto_2 {
+  color: #FCFCFC;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.88px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .footer_container__item--motto_2 {
+    color: blue;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer_container__item--motto_2 {
+    color: red;
+  }
 }/*# sourceMappingURL=main.css.map */
