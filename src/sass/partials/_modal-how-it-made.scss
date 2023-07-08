@@ -15,12 +15,16 @@
   //   margin-bottom: 2em;
 
   padding: 28px 30px;
-  @media screen and (max-width: 1199.9px) {
+  @media screen and (max-width: 767.9px) {
     max-width: 286px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199.9px) {
+    width: 37%;
     padding-top: 32px;
   }
   @media screen and (min-width: 1200px) {
     max-width: 574px;
+    padding: 32px 60px;
   }
 
   &__title {
@@ -37,15 +41,20 @@
     }
   }
   &__video {
-    width: 224px;
+    position: relative;
+    align-items: center;
+    width: 78%;
     height: 199px;
 
     border-radius: 10px;
     background-color: #000;
     margin-bottom: 20px;
+    @media screen and (min-width: 768px) and (max-width: 1199.9px) {
+      width: 78%;
+    }
     @media screen and (min-width: 1200px) {
-      width: 448px;
-      height: 205px;
+      max-width: 448px;
+      max-height: 205px;
       margin-bottom: 32px;
     }
   }
@@ -61,8 +70,8 @@
       line-height: 140%;
     }
   }
-  //   &__button--icon {
-  //     fill: black;
-  //     background-color: transparent;
-  //   }
+  &__button--icon {
+    position: absolute;
+    inset: 44% 44%;
+  }
 }
