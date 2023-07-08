@@ -1,0 +1,116 @@
+@import '../mixin';
+@import '../setup';
+
+.how-its-made {
+    background: rgba(132, 161, 120, 1);
+    &__container{
+        max-width:480px;
+        @include tablet{
+            max-width:768px;
+        }
+        @include desktop{
+            max-width:1200px;
+        }
+    }
+
+    &__title-wrap {
+        color: #FCFCFC;
+        font-size: 30px;
+        font-family: Montserrat;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1.20px;
+    }
+
+    &__title {
+        color: #FCFCFC;
+        font-family: Seymour One;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 1.04px;
+        text-transform: uppercase;
+        padding: 0 0 32px 20px;
+        text-align: left;
+
+        @include desktop {
+        
+            font-size: 38px;
+            font-weight: 400;
+            }
+    }
+
+    &__picture {}
+
+    &__text-wrap {}
+
+    &__text {
+        color: #FCFCFC;
+        font-size: 14px;
+        font-family: Montserrat;
+        font-weight: 400;
+        line-height: 27.16px;
+        letter-spacing: 0.56px;
+        word-wrap: break-word
+    }
+
+    &__button {
+        padding: 12px 51px 12px 34px;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        border-radius: 10px;
+        background-color: #F8D24E;
+        color: #000000;
+        border: none;
+        border-radius: 10px;
+        letter-spacing: 0.06em;
+    }
+
+    &__button:hover {
+        background-color: #0A8817;
+    }
+
+    &__button:focus {
+        color: #FCFCFC;
+    }
+
+    &__list {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item {}
+
+    &__icon {
+        width: 50px;
+        height: 50px;
+        padding:14px;
+        border:1px solid transparent;
+        border-radius: 50%;
+        background-color: #F8D24E;
+    }
+
+    &__statistics {
+        color: #FCFCFC;
+        font-size: 58px;
+        font-family: Montserrat;
+        font-weight: 700;
+        letter-spacing: 2.32px;
+        word-wrap: break-word
+    }
+
+    &__info {
+        color: #FCFCFC;
+        font-size: 16px;
+        font-family: Montserrat;
+        font-weight: 400;
+        line-height: 28.16px;
+        letter-spacing: 0.32px;
+        word-wrap: break-word
+    }
+
+}
