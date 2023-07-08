@@ -28,18 +28,10 @@ $colors: (
     @content;
   }
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  outline: none;
-}
-body {
+.bg-products {
+  padding-top: 60px;
   font-family: $mainfont, sans-serif;
   color: getColor(mainfontColor);
-}
-section {
-  padding-top: 60px;
   background-image: url(../images/backgrounds/backgroudMobile@x1.jpg);
   background-position: center;
   background-size: cover;
@@ -60,10 +52,6 @@ section {
     }
   }
 }
-ul {
-  list-style: none;
-}
-
 .container {
   margin: 0 auto;
   width: 100%;
@@ -114,6 +102,7 @@ ul {
   gap: 160px;
   margin: 0 auto;
   margin-bottom: 60px;
+  list-style: none;
 
   @include tablet {
     gap: 16px;
@@ -124,6 +113,7 @@ ul {
   }
 
   &__item {
+    position: relative;
     max-width: 280px;
     min-height: 480px;
     border-radius: 24px;
@@ -152,33 +142,15 @@ ul {
     background-color: getColor(orangebackground);
   }
 
-  &__img {
-    position: relative;
-    left: 40px;
-    bottom: 100px;
-
-    max-width: 200px;
-    max-height: 200px;
-
-    @include mobile {
-      left: 60px;
-    }
-    @include tablet {
-      left: 12px;
-      margin-bottom: 16px;
-    }
-    @include desktop {
-      left: 34px;
-      bottom: 151px;
-      max-width: 302px;
-      max-height: 302px;
-    }
-  }
-
   &__card {
+    padding-top: 123px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include desktop {
+      padding-top: 165px;
+    }
   }
 
   &__card-title {
@@ -191,7 +163,7 @@ ul {
   }
 
   &__card-txt {
-    padding: 0 40px 0 40px;
+    padding: 0 40px;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
@@ -199,7 +171,11 @@ ul {
     letter-spacing: 0.56px;
 
     @include tablet {
-      padding: 0 26px 0 26px;
+      padding: 0 26px;
+    }
+    @include desktop {
+      padding: 0 64px;
+      font-size: 16px;
     }
   }
 
@@ -211,5 +187,86 @@ ul {
   &__card-icon {
     width: 40px;
     height: 16px;
+  }
+
+  .shape {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include desktop {
+      width: 302;
+      height: 302;
+    }
+  }
+  .shape::after {
+    content: '';
+    position: absolute;
+    bottom: 11px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include desktop {
+      width: 302;
+      height: 302;
+    }
+  }
+
+  .img-icecream {
+    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7) 0%, rgba(156, 190, 143, 0.7) 100%),
+      #d9d9d9;
+    box-shadow: 0px 8px 30px 0px rgba(10, 136, 23, 0.25);
+  }
+  .img-icecream::after {
+    background-image: url(../images/products/ice-creamMobileTablet@x1.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../images/products/ice-creamMobileTablet@x2.png);
+    }
+    @media (min-width: 1200px) {
+      background-image: url(../images/products/Ice-creamDesktop@x1.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/products/ice-creamDesktop@x2.png);
+      }
+    }
+  }
+  .img-coffie {
+    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7) 0%, rgba(248, 210, 78, 0.7) 100%),
+      #d9d9d9;
+    box-shadow: 0px 8px 30px 0px rgba(153, 114, 23, 0.25);
+  }
+  .img-coffie::after {
+    background-image: url(../images/products/ice-coffeeMobileTablet@x1.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../images/products/ice-coffeeMobileTablet@x2.png);
+    }
+    @media (min-width: 1200px) {
+      background-image: url(../images/products/ice-coffeeDesktop@x1.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/products/ice-coffeeDesktop@x2.png);
+      }
+    }
+  }
+  .img-milkshakes {
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7) 0%, rgba(213, 117, 63, 0.7) 100%),
+      #d9d9d9;
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+  }
+  .img-milkshakes::after {
+    background-image: url(../images/products/milkshakeMobileTablet@x1.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../images/products/milkshakeMobileTablet@x2.png);
+    }
+    @media (min-width: 1200px) {
+      background-image: url(../images/products/milkshakeDesktop@x1.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/products/milkshakeDesktop@x2.png);
+      }
+    }
   }
 }
