@@ -72,10 +72,10 @@ input {
 .container {
   max-width: 480px;
   @include tablet {
-    min-width: 768px;
+    max-width: 768px;
   }
   @include desktop {
-    min-width: 1200px;
+    max-width: 1200px;
   }
   margin: 0 auto;
   padding: 0 15px;
