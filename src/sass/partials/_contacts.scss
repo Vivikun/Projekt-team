@@ -37,12 +37,15 @@
   border-radius: 24px;
   padding-top: 40px;
   padding-left: 32px;
-  padding-right: 32px;
+  padding-right: 36px;
   padding-bottom: 40px;
   max-width: 100%;
   background: #fcfcfc;
   text-align: left;
   box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
+  @include tablet {
+    padding-right: 27px;
+  }
   @include desktop {
     padding: 40px;
   }
@@ -69,6 +72,9 @@
     border-radius: 4px;
     background-color: #f8d24e;
     text-align: center;
+    @include tablet {
+      font-size: 16px;
+    }
   }
   &__address {
     display: flex;
@@ -86,6 +92,10 @@
       gap: 12px;
       margin-top: 32px;
       padding-bottom: 32px;
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 16px;
     }
   }
   &__schedule {
@@ -99,6 +109,10 @@
     @include tablet {
       padding-top: 32px;
       padding-bottom: 24px;
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 16px;
     }
   }
   &__links {
@@ -113,6 +127,10 @@
     @include tablet {
       padding-top: 32px;
       gap: 4px;
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 16px;
     }
   }
   &__links a {
@@ -126,6 +144,12 @@
     font-weight: 500;
     line-height: 186%;
     letter-spacing: 0.48px;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include desktop {
+      font-size: 16px;
+    }
   }
   .days {
     color: #131313;
