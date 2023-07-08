@@ -88,3 +88,37 @@
     color: #ababab;
   }
 }
+.header__button {
+  color: #131313;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+  width: 134px;
+  height: 42px;
+  border: none;
+  fill: none;
+  position: relative;
+  top: 0%;
+  transition-property: color, fill;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    fill: #0a8817;
+  }
+  &:focus {
+    color: #ffffff;
+    fill: #0a8817;
+  }
+  &:disabled {
+    fill: #ababab;
+  }
+}
+
+.header_svg {
+  position: absolute;
+  left: 0%;
+  top: 12px;
+}
