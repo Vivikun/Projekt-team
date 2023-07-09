@@ -1,13 +1,11 @@
 <header>
   <div class="container container--header">
     <nav class="header">
-      <a href="#" class="header__svg">
-        <svg class="header__icon" width="40" height="37">
-          <use href="./images/icons-svg.svg#icon-ice-crema"></use>
+      <p class="header__svg">
+        <svg width="60" height="65">
+          <use href="./images/header-logo.svg#icon-Logo-header"></use>
         </svg>
-        ce
-      </a>
-      <!--icona LOGO musi zostac zmieniona-->
+      </p>
       <button
         type="button"
         class="toggle-btn js-open-menu"
@@ -18,7 +16,6 @@
           <use href="./images/icons-svg.svg#icon-menu-hambburger"></use>
         </svg>
       </button>
-
       <ul class="header__list">
         <li><a class="header__link" href="#">Home</a></li>
         <li><a class="header__link" href="#">How it's made?</a></li>
@@ -36,6 +33,7 @@
           made with <br />
           passion
         </h1>
+
         <ul class="header2__list">
           <li class="header2__number">16</li>
           <li class="header2__item">cafes</li>
@@ -44,11 +42,26 @@
         </ul>
       </div>
       <div class="links">
-        <a class="links__add links__add--border" href="#">Products</a>
-        <a class="links__add links__add--underline" href="#">How it’s made?</a>
+        <input
+          type="button"
+          class="links__products"
+          onclick="location.href='#products';"
+          value="products"
+        />
+        <input
+          type="button"
+          class="links__made"
+          onclick="location.href='#made';"
+          value="How it’s made?"
+        />
       </div>
       <div class="header2 header2--position">
         <p class="header2__text">
+          <img
+            class="header2__image"
+            src="images/header/ice-cream-headerDesktop@x1.png"
+            alt="rożek z gałkami lodów"
+          />
           Indulge in a scoop of ice cream made with passion and treat your taste buds to an
           unforgettable experience!
         </p>
