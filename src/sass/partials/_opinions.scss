@@ -2,6 +2,16 @@
 @import '../setup';
 
 .swiper {
+  margin-top: -92px;
+  @media screen and (min-width: 480px) {
+    margin-top: -109px;
+  }
+  @include tablet {
+    margin-top: -144px;
+  }
+  @include desktop {
+    margin-top: -98px;
+  }
   max-width: 480px;
   @include tablet {
     max-width: 768px;
@@ -26,37 +36,38 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .opinions {
-  background-color: transparent;
-  padding-top: 60px;
   margin: 0 auto;
-  background-image: url(/src/images/backgrounds/backgroudMobile@x1.jpg);
-  background-position: 70%;
+  background-position: center;
   background-size: cover;
   background-repeat: repeat-y;
-  padding-bottom: 413px;
-  @media screen and (min-width: 480px) {
-    padding-bottom: 403px;
+  max-width: 767px;
+  padding-bottom: 409px;
+  background-image: url(/src/images/backgrounds/backgroudMobile@x1.jpg);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(/src/images/backgrounds/backgroudMobile@x2.jpg);
   }
+
   @include tablet {
+    min-width: 768px;
+    max-width: 1199px;
     padding-bottom: 379px;
+    background-position: 50% 50%;
+    background-image: url(/src/images/backgrounds/backgroundTablet@x1.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/src/images/backgrounds/backgroundTablet@x2.jpg);
+    }
   }
   @include desktop {
+    min-width: 1200px;
+    max-width: 1600px;
+    background-position: 50% 50%;
     padding-bottom: 228px;
+    background-image: url(/src/images/backgrounds/backgroudDesktop@x1.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/src/images/backgrounds/backgroudDesktop@x2.jpg);
+    }
   }
-  // @include tablet {
-  //   background-size: cover;
-  //   background-position: 50% 50%;
-  //   padding-bottom: 350px;
-  //   background-image: url(/src/images/backgrounds/backgroundTablet@x1.jpg);
-  // }
-  // @include desktop {
-  //   background-size: cover;
-  //   min-width: 1200px;
-  //   max-width: 1600px;
-  //   background-position: 50% 50%;
-  //   padding-bottom: 450px;
-  //   background-image: url(/src/images/backgrounds/backgroudDesktop@x1.jpg);
-  // }
+
   &__list {
     display: flex;
     flex-direction: column;
