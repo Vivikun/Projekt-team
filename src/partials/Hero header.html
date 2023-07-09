@@ -1,12 +1,11 @@
 <header>
-  <div class="container container--header">
+  <div class="container--header">
     <nav class="header">
       <a href="#">
-        <svg class="header__icon" width="40" height="37">
-          <use href="./images/icons-svg.svg#icon-ice-crema"></use>
+        <svg class="header__icon" width="60" height="65">
+          <use href="./images/icons-svg.svg#icon-Logo-2"></use>
         </svg>
       </a>
-      <!--icona LOGO musi zostac zmieniona-->
       <button
         type="button"
         class="toggle-btn js-open-menu"
@@ -42,31 +41,88 @@
           <li class="header2__item">food trucks</li>
         </ul>
       </div>
+    </section>
+    <section class="section--background">
       <div class="links">
         <a class="links__add links__add--border" href="#">Products</a>
         <a class="links__add links__add--underline" href="#">How it’s made?</a>
       </div>
       <div class="header2 header2--position">
-        <p class="header2__text">
-          Indulge in a scoop of ice cream made with passion and treat your taste buds to an
-          unforgettable experience!
-        </p>
+        <picture>
+          <source
+            srcset="
+              images/header/ice-cream-headerTablet@x1.png 1x,
+              images/header/ice-cream-headerTablet@x2.png 2x
+            "
+            media="(max-width: 480px)"
+          />
+          <source
+            srcset="
+              images/header/ice-cream-headerTablet@x1.png 1x,
+              images/header/ice-cream-headerTablet@x2.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              images/header/ice-cream-headerDesktop@x1.png 1x,
+              images/header/ice-cream-headerDesktop@x2.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <img
+            class="header2__icecream"
+            src="./images/header/ice-cream-headerTablet@x1.png"
+            alt="9 gałek lodów"
+          />
+        </picture>
+        <div class="header2__elements">
+          <p class="header2__text">
+            Indulge in a scoop of ice cream made with passion and treat your taste buds to an
+            unforgettable experience!
+          </p>
+          <svg class="header2__icon" width="40" height="16">
+            <use href="./images/icons-svg.svg#icon-Arrow"></use>
+          </svg>
+        </div>
+        <svg class="header2__bckrd-tablet-right" width="101" height="32">
+          <use href="./images/icons-svg.svg#icon-kropki-tablet-right"></use>
+        </svg>
+        <svg class="header2__bckrd-mobile-left" width="85" height="32">
+          <use href="./images/icons-svg.svg#icon-kropki-mobile-left"></use>
+        </svg>
+        <svg class="header2__bckrd-mobile-right" width="81" height="32">
+          <use href="./images/icons-svg.svg#icon-kropki-mobile-right"></use>
+        </svg>
 
-        <img
-          class="header2__picture"
-          src="images/header/ice-creamMobile@x1.png"
-          alt="rożek z gałkami lodów"
-          srcset="
-                images/header/ice-creamMobile@x1.png    177w;
-                images/header/ice-creamMobile@x2.png    354w;
-                images/header/ice-creamTablet@x1.png    268w;
-                images/header/ice-creamTablet@x2.png    536w;
-                images/header/ice-creamDesktop@x1.png   456w;
-                images/header/ice-creamDesktop@x2.png   912w;
-                 
-                  "
-          sizes="(min-width: 768px) 268px, (min-width: 1280px) 456w, 100vw"
-        />
+        <picture>
+          <source
+            srcset="
+              images/header/ice-creamMobile@x1.png 1x,
+              images/header/ice-creamMobile@x2.png 2x
+            "
+            media="(max-width: 480px)"
+          />
+          <source
+            srcset="
+              images/header/ice-creamTablet@x1.png 1x,
+              images/header/ice-creamTablet@x2.png 2x
+            "
+            media="(max-width: 768px)"
+          />
+          <source
+            srcset="
+              images/header/ice-creamDesktop@x1.png 1x,
+              images/header/ice-creamDesktop@x2.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <img
+            class="header2__picture"
+            src="./images/header/ice-creamMobile@x1.png"
+            alt="rożek z gałkami lodów"
+          />
+        </picture>
       </div>
     </section>
   </div>
@@ -74,8 +130,8 @@
 
 <div class="menu-container js-menu-container" id="mobile-menu">
   <a href="#">
-    <svg class="header__icon" width="32" height="32">
-      <use href="./images/icons-svg.svg#icon-ice-crema"></use>
+    <svg class="header__icon" width="60" height="65">
+      <use href="./images/icons-svg.svg#icon-Logo-2"></use>
     </svg>
   </a>
   <button type="button" class="menu-container__close-btn js-close-menu">
