@@ -23,10 +23,40 @@
 }
 .swiper-pagination-bullet {
   background: map-get($colors, 'background');
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .opinions {
   background-color: transparent;
-  margin-bottom: 60px;
+  padding-top: 60px;
+  margin: 0 auto;
+  background-image: url(/src/images/backgrounds/backgroudMobile@x1.jpg);
+  background-position: 70%;
+  background-size: cover;
+  background-repeat: repeat-y;
+  padding-bottom: 413px;
+  @media screen and (min-width: 480px) {
+    padding-bottom: 403px;
+  }
+  @include tablet {
+    padding-bottom: 379px;
+  }
+  @include desktop {
+    padding-bottom: 228px;
+  }
+  // @include tablet {
+  //   background-size: cover;
+  //   background-position: 50% 50%;
+  //   padding-bottom: 350px;
+  //   background-image: url(/src/images/backgrounds/backgroundTablet@x1.jpg);
+  // }
+  // @include desktop {
+  //   background-size: cover;
+  //   min-width: 1200px;
+  //   max-width: 1600px;
+  //   background-position: 50% 50%;
+  //   padding-bottom: 450px;
+  //   background-image: url(/src/images/backgrounds/backgroudDesktop@x1.jpg);
+  // }
   &__list {
     display: flex;
     flex-direction: column;
@@ -34,6 +64,7 @@
     gap: 32px;
   }
   &__paragraph {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     max-width: 280px;
     @include tablet {
       max-width: 705px;
@@ -69,24 +100,31 @@
     }
   }
   &__picture1 {
+    background: lightgray -16px -5.49px / 129.412% 194.094% no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     width: 85px;
     height: 85px;
     border: 1px solid transparent;
     border-radius: 50%;
   }
   &__picture2 {
+    background: lightgray -16px -5.49px / 129.412% 194.094% no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     width: 97px;
     height: 91px;
     border: 1px solid transparent;
     border-radius: 50%;
   }
   &__picture3 {
+    background: lightgray -16px -5.49px / 129.412% 194.094% no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     width: 91px;
     height: 94px;
     border: 1px solid transparent;
     border-radius: 50%;
   }
   &__header {
+    filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.1));
     color: map-get($colors, 'body');
     text-align: center;
     font-family: Montserrat;
@@ -100,6 +138,8 @@
     margin-bottom: 32px;
   }
   &__gallery {
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
     margin-bottom: 48px;
     @include tablet {
       margin-bottom: 68px;
@@ -108,4 +148,32 @@
       margin-bottom: 108px;
     }
   }
+  // .gallery {
+  // margin: 0 auto;
+  // background-image: url(../images/Backgroud_mobile@1x.jpg);
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: repeat-y;
+  // padding-bottom: 200px;
+  // max-width: 767px;
+  // display: flex;
+  // justify-content: center;
+
+  //     @include tablet {
+  //     min-width: 768px;
+  //     max-width: 1199px;
+  //     background-size: cover;
+  //     background-position: 50% 50%;
+  //     padding-bottom: 350px;
+  //     background-image: url(../images/Background_tablet@1x.jpg);
+  //     }
+  //     @include desktop {
+  //     background-size: cover;
+  //     min-width: 1200px;
+  //     max-width: 1600px;
+  //     background-position: 50% 50%;
+  //     padding-bottom: 450px;
+  //     background-image: url(../images/Backgroud_desktop@1x.jpg);
+  //     }
+  // }
 }
