@@ -1,0 +1,190 @@
+@import '../mixin';
+@import '../setup';
+
+.swiper {
+  margin-top: -92px;
+  @media screen and (min-width: 480px) {
+    margin-top: -109px;
+  }
+  @include tablet {
+    margin-top: -144px;
+  }
+  @include desktop {
+    margin-top: -98px;
+  }
+  max-width: 480px;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination {
+  position: relative;
+}
+.swiper-pagination-bullet {
+  background: map-get($colors, 'background');
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.opinions {
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-y;
+  max-width: 767px;
+  padding-bottom: 409px;
+  background-image: url(/src/images/backgrounds/backgroudMobile@x1.jpg);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(/src/images/backgrounds/backgroudMobile@x2.jpg);
+  }
+
+  @include tablet {
+    min-width: 768px;
+    max-width: 1199px;
+    padding-bottom: 379px;
+    background-position: 50% 50%;
+    background-image: url(/src/images/backgrounds/backgroundTablet@x1.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/src/images/backgrounds/backgroundTablet@x2.jpg);
+    }
+  }
+  @include desktop {
+    min-width: 1200px;
+    max-width: 1600px;
+    background-position: 50% 50%;
+    padding-bottom: 228px;
+    background-image: url(/src/images/backgrounds/backgroudDesktop@x1.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/src/images/backgrounds/backgroudDesktop@x2.jpg);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  &__paragraph {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    max-width: 280px;
+    @include tablet {
+      max-width: 705px;
+    }
+    @include desktop {
+      max-width: 968px;
+    }
+    border-radius: 10px;
+    background: map-get($colors, 'background');
+    padding: 35px 39px;
+    @include tablet {
+      padding: 28px 80px;
+    }
+    @include desktop {
+      padding: 43px 109px;
+    }
+    color: map-get($colors, 'text');
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 255%;
+    @include tablet {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 186%;
+      letter-spacing: 0.56px;
+    }
+    @include desktop {
+      font-size: 16px;
+      letter-spacing: 0.64px;
+    }
+  }
+  &__picture1 {
+    background: lightgray -16px -5.49px / 129.412% 194.094% no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 85px;
+    height: 85px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+  }
+  &__picture2 {
+    background: lightgray -16px -5.49px / 129.412% 194.094% no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 97px;
+    height: 91px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+  }
+  &__picture3 {
+    background: lightgray -16px -5.49px / 129.412% 194.094% no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 91px;
+    height: 94px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+  }
+  &__header {
+    filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.1));
+    color: map-get($colors, 'body');
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 186%;
+    @include tablet {
+      font-size: 16px;
+    }
+    margin-bottom: 32px;
+  }
+  &__gallery {
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin-bottom: 48px;
+    @include tablet {
+      margin-bottom: 68px;
+    }
+    @include desktop {
+      margin-bottom: 108px;
+    }
+  }
+  // .gallery {
+  // margin: 0 auto;
+  // background-image: url(../images/Backgroud_mobile@1x.jpg);
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: repeat-y;
+  // padding-bottom: 200px;
+  // max-width: 767px;
+  // display: flex;
+  // justify-content: center;
+
+  //     @include tablet {
+  //     min-width: 768px;
+  //     max-width: 1199px;
+  //     background-size: cover;
+  //     background-position: 50% 50%;
+  //     padding-bottom: 350px;
+  //     background-image: url(../images/Background_tablet@1x.jpg);
+  //     }
+  //     @include desktop {
+  //     background-size: cover;
+  //     min-width: 1200px;
+  //     max-width: 1600px;
+  //     background-position: 50% 50%;
+  //     padding-bottom: 450px;
+  //     background-image: url(../images/Backgroud_desktop@1x.jpg);
+  //     }
+  // }
+}

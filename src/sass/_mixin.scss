@@ -3,7 +3,7 @@
     @content;
   }
 }
-@mixin deteskop {
+@mixin desktop {
   @media screen and (min-width: 1200px) {
     @content;
   }
@@ -28,8 +28,16 @@ $colors: (
   'background-products_milkshakes': #d6936d,
   'background-products_ice cream': #aec6a5,
   'mobileMenu': #85a279,
+  'background-header': #0a8817,
   'border_footer': #e1e1e1,
+  'transition-duration': 300ms,
+  'timing-function': cubic-bezier(0.4, 0, 0.2, 1),
 );
 @function getColor($key) {
   @return map-get($colors, $key);
+}
+@mixin font($fw, $fsi, $lh) {
+  font-weight: $fw;
+  font-size: $fsi;
+  line-height: $lh;
 }
