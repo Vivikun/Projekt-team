@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif, sans-serif;
+  font-family: 'Montserrat', sans-serif, sans-serif;
   color: #131313;
 }
 
@@ -56,7 +56,7 @@ ul {
 .products__title {
   text-align: center;
   font-size: 30px;
-  font-family: "Seymour One", sans-serif;
+  font-family: 'Seymour One', sans-serif;
   font-weight: 400;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -178,7 +178,6 @@ ul {
   }
 }
 
-
 body {
   font-size: 14px;
   color: #131313;
@@ -265,7 +264,7 @@ input {
 }
 
 :root {
-  --main-font: "Montserrat", sans-serif;
+  --main-font: 'Montserrat', sans-serif;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --fon-color: #fcfcfc;
 }
@@ -386,7 +385,8 @@ input {
   height: 100%;
   outline: rgba(0, 0, 0, 0);
 }
-.franchise-modal__input:focus-within, .franchise-modal__input:focus-visible {
+.franchise-modal__input:focus-within,
+.franchise-modal__input:focus-visible {
   outline: rgba(0, 0, 0, 0);
 }
 .franchise-modal__input--comment {
@@ -544,7 +544,8 @@ input {
   height: 100%;
   outline: rgba(0, 0, 0, 0);
 }
-.franchise-modal__input:focus-within, .franchise-modal__input:focus-visible {
+.franchise-modal__input:focus-within,
+.franchise-modal__input:focus-visible {
   outline: rgba(0, 0, 0, 0);
 }
 .franchise-modal__input--comment {
@@ -639,7 +640,7 @@ input {
   }
 }
 :root {
-  --main-font: "Montserrat", sans-serif;
+  --main-font: 'Montserrat', sans-serif;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
   --fon-color: #fcfcfc;
 }
@@ -747,7 +748,8 @@ input {
   height: 100%;
   outline: rgba(0, 0, 0, 0);
 }
-.franchise-modal__input:focus-within, .franchise-modal__input:focus-visible {
+.franchise-modal__input:focus-within,
+.franchise-modal__input:focus-visible {
   outline: rgba(0, 0, 0, 0);
 }
 .franchise-modal__input--comment {
@@ -905,7 +907,8 @@ input {
   height: 100%;
   outline: rgba(0, 0, 0, 0);
 }
-.franchise-modal__input:focus-within, .franchise-modal__input:focus-visible {
+.franchise-modal__input:focus-within,
+.franchise-modal__input:focus-visible {
   outline: rgba(0, 0, 0, 0);
 }
 .franchise-modal__input--comment {
@@ -1109,7 +1112,6 @@ address {
   }
 }
 
-
 .modal-him {
   position: relative;
   overflow: none;
@@ -1155,10 +1157,10 @@ address {
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-
+}
 .section--header {
   background: none;
-  background-color: #84A178;
+  background-color: #84a178;
   margin: 0 auto;
 }
 
@@ -1166,7 +1168,7 @@ address {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #84A178;
+  background-color: #84a178;
 }
 .header__list {
   display: none;
@@ -1185,15 +1187,16 @@ address {
 }
 .header__link {
   text-decoration: none;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
-.header__link:hover, .header__link:focus {
-  color: #F8D24E;
+.header__link:hover,
+.header__link:focus {
+  color: #f8d24e;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__icon {
-  fill: #F8D24E;
+  fill: #f8d24e;
   width: 40px;
   height: 37px;
   padding: 12px 0 0 20px;
@@ -1227,7 +1230,7 @@ address {
     font-style: normal;
     font-weight: 600;
     border-radius: 10px;
-    background-color: #F8D24E;
+    background-color: #f8d24e;
     color: #000000;
     border: none;
     border-radius: 4px;
@@ -1243,7 +1246,7 @@ address {
   justify-content: space-between;
 }
 .header2__title {
-  color: #FCFCFC;
+  color: #fcfcfc;
   font-family: Seymour One;
   font-size: 26px;
   font-style: normal;
@@ -1279,7 +1282,7 @@ address {
   padding-right: 16px;
 }
 .header2__item {
-  color: #FCFCFC;
+  color: #fcfcfc;
   text-align: right;
   font-family: Montserrat;
   font-size: 14px;
@@ -1315,7 +1318,7 @@ address {
   .header2__text {
     display: flex;
     flex-wrap: wrap;
-    color: #FFF;
+    color: #fff;
     font-family: Montserrat;
     font-size: 12px;
     font-style: normal;
@@ -1347,7 +1350,7 @@ address {
 .links__add--border {
   padding: 11px 26px;
   border-radius: 8px;
-  border: 2px solid #F8D24E;
+  border: 2px solid #f8d24e;
   color: #000;
 }
 @media screen and (min-width: 1200px) {
@@ -1357,7 +1360,7 @@ address {
 }
 .links__add--underline {
   padding-top: 11px;
-  color: #F8D24E;
+  color: #f8d24e;
   text-align: center;
   font-family: Montserrat;
   font-size: 12px;
@@ -1398,7 +1401,7 @@ address {
 }
 
 .menu-container {
-  background-color: #85A279;
+  background-color: #85a279;
   position: fixed;
   inset: 0;
   display: flex;
@@ -1415,7 +1418,7 @@ address {
   right: 21px;
 }
 .menu-container__icon-btn {
-  fill: #FCFCFC;
+  fill: #fcfcfc;
 }
 
 .mobile-menu {
@@ -1424,7 +1427,7 @@ address {
   gap: 32px;
 }
 .mobile-menu__link {
-  color: #FCFCFC;
+  color: #fcfcfc;
   text-align: center;
   font-family: Montserrat;
   font-size: 32px;
@@ -1432,7 +1435,7 @@ address {
   font-weight: 700;
   line-height: normal;
 }
-.mobile-menu__link:hover, .mobile-menu__link:focus {
+.mobile-menu__link:hover,
+.mobile-menu__link:focus {
   color: #131313;
-
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
