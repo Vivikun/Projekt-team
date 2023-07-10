@@ -2,7 +2,7 @@
   &-button {
     &__close {
       position: absolute;
-      top: 12px;
+      top: 10px;
       right: 12px;
       border: transparent;
       border-radius: 50%;
@@ -10,6 +10,7 @@
     }
   }
   &-container {
+    // transform: translateX(0);
     position: relative;
     overflow: none;
 
