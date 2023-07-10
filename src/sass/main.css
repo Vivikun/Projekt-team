@@ -49,35 +49,58 @@ footer {
   min-width: 320px;
   max-width: 1200px;
   width: 100vw;
+  width: 320px;
   height: 1487px;
   flex-shrink: 0;
   background: #84a178;
-}
-
-.footer_container {
   display: block;
+  padding-top: 935px;
 }
-.footer_container__item {
+footer .footer_container__button {
+  width: 196px;
+  height: 42px;
+  flex-shrink: 0;
+  background-color: antiquewhite;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer .footer_container__button:nth-child(2) {
+  margin-top: 16px;
+}
+footer .footer_container__text {
   display: flex;
-  width: 100%;
+  width: 232px;
+  height: 42px;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-left: 22px;
+  margin-top: 60px;
 }
-.footer_container__item--motto_2 {
+footer .footer_container__text--motto_1 {
   color: #FCFCFC;
-  font-family: Montserrat;
-  font-size: 48px;
+  font-family: "Montserrat";
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 2.88px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 768px) {
-  .footer_container__item--motto_2 {
-    color: blue;
-  }
+footer .footer_container__main {
+  display: flex;
+  width: 200px;
+  height: 76px;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-left: 20px;
+  margin-top: 16px;
 }
-@media screen and (min-width: 1200px) {
-  .footer_container__item--motto_2 {
-    color: red;
-  }
+footer .footer_container__main--motto_2 {
+  color: #FCFCFC;
+  font-family: Montserrat;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.36px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */
