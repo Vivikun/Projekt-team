@@ -180,8 +180,17 @@ $colors: (
   }
 
   &__card-btn {
+    position: absolute;
+    bottom: 16px;
     border: none;
     background-color: transparent;
+
+    @include tablet {
+      bottom: 12px;
+    }
+    @include desktop {
+      bottom: 60px;
+    }
   }
 
   &__card-icon {
@@ -213,6 +222,7 @@ $colors: (
     background-repeat: no-repeat;
 
     @include desktop {
+      bottom: 16px;
       width: 302;
       height: 302;
     }
