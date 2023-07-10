@@ -5,30 +5,44 @@
     background-color:  #85A279;
     position: fixed;
     inset: 0;
-    max-width: 480px;
+    max-width: 768px;
     width: 100%;
-    transform: translateX(100%);
-    transition: transform 250ms ease;
+    transform: translateX(-100%);
+    transition: transform 250ms ease-in;
     
     &__close-btn {
         position: absolute;
         background-color: transparent;
         border: none;
-        top: 21px;
-        right: 21px;
+        top: 20px;
+        right: 20px;
     }
     &__icon-btn {
         fill: #FCFCFC;
+        width: 32px;
+        height: 32px;
     }
         }
-
+    .nav-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: justify;
+    }
     .mobile-menu {
         display: flex;
         flex-direction: column;
+        text-align: center;
+        padding-top: 47px;
         gap: 32px;
+
+       @include tablet {
+        gap: 40px;
+        padding-top: 76px;
+       } 
     &__link {
         color: #FCFCFC;
-        text-align: center;
+        
         font-family: Montserrat;
         font-size: 32px;
         font-style: normal;
