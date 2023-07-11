@@ -1,37 +1,10 @@
 $mainfont: 'Montserrat', sans-serif;
 $scndfont: 'Seymour One', sans-serif;
 
-$colors: (
-  'mainfontColor': #131313,
-  'greenbackground': #aec6a5,
-  'yellowbackground': #efd478,
-  'orangebackground': #d6936d,
-);
-
-@function getColor($key) {
-  @return map-get($colors, $key);
-}
-
-@mixin mobile {
-  @media screen and (min-width: 480px) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media screen and (min-width: 786px) {
-    @content;
-  }
-}
-@mixin desktop {
-  @media screen and (min-width: 1200px) {
-    @content;
-  }
-}
 .bg-products {
   padding-top: 60px;
   font-family: $mainfont, sans-serif;
-  color: getColor(mainfontColor);
+  color: getColor('body');
   background-image: url(../images/backgrounds/backgroudMobile@x1.jpg);
   background-position: center;
   background-size: cover;
@@ -118,7 +91,7 @@ $colors: (
     min-height: 480px;
     border-radius: 24px;
 
-    @include mobile {
+    @include phone {
       max-width: 320px;
       min-height: 428px;
     }
@@ -133,13 +106,13 @@ $colors: (
     }
   }
   & > .bg-icecream {
-    background-color: getColor(greenbackground);
+    background-color: getColor('background-products_ice cream');
   }
   & > .bg-coffie {
-    background-color: getColor(yellowbackground);
+    background-color: getColor('modal_buy');
   }
   & > .bg-milkshakes {
-    background-color: getColor(orangebackground);
+    background-color: getColor('background-products_milkshakes');
   }
 
   &__card {
@@ -230,7 +203,7 @@ $colors: (
 
   .img-icecream {
     background: linear-gradient(0deg, rgba(156, 190, 143, 0.7) 0%, rgba(156, 190, 143, 0.7) 100%),
-      #d9d9d9;
+      getColor('hr-dots');
     box-shadow: 0px 8px 30px 0px rgba(10, 136, 23, 0.25);
   }
   .img-icecream::after {
@@ -247,7 +220,7 @@ $colors: (
   }
   .img-coffie {
     background: linear-gradient(0deg, rgba(248, 210, 78, 0.7) 0%, rgba(248, 210, 78, 0.7) 100%),
-      #d9d9d9;
+      getColor('hr-dots');
     box-shadow: 0px 8px 30px 0px rgba(153, 114, 23, 0.25);
   }
   .img-coffie::after {
@@ -264,7 +237,7 @@ $colors: (
   }
   .img-milkshakes {
     background: linear-gradient(0deg, rgba(213, 117, 63, 0.7) 0%, rgba(213, 117, 63, 0.7) 100%),
-      #d9d9d9;
+      getColor('hr-dots');
     box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
   }
   .img-milkshakes::after {
