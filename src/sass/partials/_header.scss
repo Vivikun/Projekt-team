@@ -1,9 +1,12 @@
 @import '../mixin';
 @import '../setup';
 
+.container--header {
+  position: relative;
+}
 .section--header {
   background: none;
-  background-color: getColor('background');
+
   margin: 0 auto;
   position: relative;
 }
@@ -12,24 +15,50 @@
   max-width: 780px;
   &:last-child(2) {
     flex-direction: row-reverse;
-}
+  }
 }
 .container--background-Hero {
   background: none;
-  background-color: #84A178;
   margin: 0 auto;
-
-  @include desktop {
-  background-image: url('/src/images/header/KropkiDesktop@x1.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  background-image:url('/src/images/header/KropkiDesktop@x2.png');
+  
 }
-}
+
+.points {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  &__mobile {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  &__desktop {
+    display: none;
+
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      display: block;
+    }
+  }
 }
 
 .header {
@@ -38,13 +67,13 @@
   background-color: getColor('background');
 
   &__svg {
-      text-align: center;
+    text-align: center;
   }
- 
+
   &__list {
     display: none;
 
-      @include desktop {
+    @include desktop {
       display: flex;
       flex-direction: row;
       padding: 32px 0 13px 0;
@@ -78,7 +107,7 @@
     @include phone {
       width: 48px;
       height: 44px;
-     margin-top: 14px;
+      margin-top: 14px;
     }
     @include tablet {
       margin-top: 20px;
@@ -96,7 +125,7 @@
   width: 152px;
   height: 42px;
 
-   @include tablet {
+  @include tablet {
     margin: 24px 32px 0 32px;
     display: flex;
     align-items: center;
@@ -118,15 +147,18 @@
       background: getColor('background-header');
     }
     &:focus {
+      fill: getColor('background_address');
       color: getColor('background_address');
       background: getColor('background-header');
     }
     &:disabled {
       color: getColor('time-color');
     }
-    
+    &__button-icon {
+      padding-left: 4px;
+    }
   }
-  }
+}
 
 // .modal-btn--modal-open {
 //   padding: 12px 35px 12px 36px;
@@ -150,6 +182,7 @@
     background: getColor('background-header');
   }
   &:focus {
+    fill: getColor('background_address');
     color: getColor('background_address');
     background: getColor('background-header');
   }
@@ -159,12 +192,11 @@
 
   @include phone {
     margin: 114px 164px 88px 164px;
-  
   }
-      @include tablet {
-        display: none;
-      }
-    }
+  @include tablet {
+    display: none;
+  }
+}
 
 .header2 {
   display: flex;
@@ -184,7 +216,7 @@
       margin-top: 40px;
     }
 
-     @include desktop {
+    @include desktop {
       font-size: 38px;
       font-weight: 400;
     }
@@ -228,15 +260,12 @@
       padding-right: 16px;
     }
   }
-    &__item-gap {
-    
-
+  &__item-gap {
     @include tablet {
       margin-bottom: 20px;
     }
-    }
-    }
-  
+  }
+}
 
 .header3 {
   &__picture {
@@ -247,11 +276,11 @@
     bottom: 0;
 
     @include phone {
-    top: 90px;
-    right: 20px;
-    width: 218px;
-    height: 267px;
-    bottom: 0;
+      top: 90px;
+      right: 20px;
+      width: 218px;
+      height: 267px;
+      bottom: 0;
     }
 
     @include tablet {
@@ -270,71 +299,67 @@
     display: none;
 
     @include tablet {
-    display: flex;
-    color: getColor('background_address');
-    font-family: DM Sans;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    margin: 46px 0 29px 0;
-    width: 165px;
-   
+      display: flex;
+      color: getColor('background_address');
+      font-family: DM Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      margin: 46px 0 29px 0;
+      width: 165px;
+    }
+    @include desktop {
+      width: 200px;
+      margin-top: 70px;
+      font-size: 14px;
+      margin: 120px 0 24px 0;
+    }
   }
-  @include desktop {
-    width: 200px;
-    margin-top: 70px;
-    font-size: 14px;
-    margin: 120px 0 24px 0;
-  }
-}
 
-&__icecream {
-  display: none;
+  &__icecream {
+    display: none;
 
-  @include tablet {
+    @include tablet {
       display: flex;
       width: 152px;
       height: 152px;
       margin: 12px 0;
-      
-  }
-  @include desktop {
+    }
+    @include desktop {
       display: flex;
       width: 225px;
       height: 225px;
       margin: 42px 0 65px 0;
-      }
+    }
   }
-&__elements {
-display: flex;
-flex-direction: column;
-text-align: left;
+  &__elements {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  &__icon {
+    display: none;
+    fill: #fcfcfc;
 
-}
-&__icon {
-display: none;
-fill: #fcfcfc;
+    @include tablet {
+      display: inline-flex;
+      margin-bottom: 24px;
+    }
+  }
+  &--position {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
 
-@include tablet {
-  display: inline-flex;
-  margin-bottom: 24px;
-}
-}
-&--position {
-display: flex;
-flex-direction: row;
-gap: 12px;
+    @include tablet {
+      padding-bottom: 12px;
+    }
 
-
-@include tablet {
-  padding-bottom: 12px;
-}
-
-@include desktop {
-  gap: 16px;
-}
-}
+    @include desktop {
+      gap: 16px;
+    }
+  }
 }
 .links {
   display: flex;
@@ -342,20 +367,19 @@ gap: 12px;
   gap: 12px;
   margin-top: 32px;
   padding-bottom: 236px;
-  
 
   @include phone {
     align-items: baseline;
     padding-bottom: 157px;
-    }
+  }
 
-    @include tablet {
-      padding-bottom: 0;
-    }
+  @include tablet {
+    padding-bottom: 0;
+  }
 
-    @include desktop {
-      padding-bottom: 0;  
-    }
+  @include desktop {
+    padding-bottom: 0;
+  }
 
   &__products {
     width: 108px;
@@ -384,14 +408,6 @@ gap: 12px;
     &:disabled {
       border: 2px solid getColor('time-color');
     }
-  
-      @include tablet {
-       
-      }
-  
-      @include desktop {
-         
-      }
   }
   &__made {
     width: 154px;
@@ -418,19 +434,11 @@ gap: 12px;
     &:disabled {
       color: getColor('time-color');
     }
-    
+
     @include phone {
       width: 100px;
       height: 24px;
-      }
-  
-      @include tablet {
-       
-      }
-  
-      @include desktop {
-         
-      }
+    }
   }
 }
 
@@ -454,5 +462,35 @@ gap: 12px;
     width: 32px;
     height: 32px;
     align-items: end;
+  }
+}
+.header3__backgrd {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+
+  &__icon-T-left {
+    display: none;
+    @include phone {
+      display: none;
+    }
+    @include tablet {
+      left: 0;
+      @include desktop {
+        display: none;
+      }
+
+      &__icon-T-right {
+        @include tablet {
+          right: 0;
+          @include phone {
+            &--backgrd-tablet {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 }
