@@ -12,6 +12,18 @@
     padding-left: 16px;
     padding-right: 16px;
   }
+  &__svg {
+    fill: getColor('primary');
+    &:hover {
+      fill: getColor('text');
+    }
+    &:focus {
+      fill: getColor('text');
+    }
+    &:disabled {
+      fill: getColor('text');
+    }
+  }
   &__hedling {
     color: getColor('text');
     font-family: Montserrat;

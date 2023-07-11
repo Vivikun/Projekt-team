@@ -1,5 +1,5 @@
-<section class="bg-products">
-  <section id="products">
+<section id="products" class="bg-products">
+  <section>
     <div class="container products">
       <p class="products__txt">100% natrual</p>
       <h1 class="products__title">products</h1>
@@ -83,7 +83,12 @@
               Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries
               and other sweets of your choice
             </p>
-            <button class="desserts__card-btn js-open-menu-2" type="button">
+            <button
+              class="desserts__card-btn"
+              type="button"
+              aria-expanded="false"
+              aria-controls="Open-mobil"
+            >
               <svg class="desserts__card-icon">
                 <use href="./images/icons-svg.svg#icon-Arrow"></use>
               </svg>

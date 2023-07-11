@@ -157,6 +157,7 @@ $scndfont: 'Seymour One', sans-serif;
     bottom: 16px;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 
     @include tablet {
       bottom: 12px;

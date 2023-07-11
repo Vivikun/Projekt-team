@@ -23,7 +23,7 @@
   transition-duration: getColor('transition-duration');
   transition-timing-function: getColor('timing-function');
   &:hover {
-    color: getColor('body');
+    background: getColor('background-header');
   }
   &:focus {
     color: getColor('background_address');
