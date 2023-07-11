@@ -101,9 +101,12 @@
     padding-right: 40px;
     margin-bottom: 48px;
   }
-  &_tr:not(:last-child) {
-    margin-bottom: 11px;
+  &_tr {
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
   }
+
   &_td {
     font-family: Montserrat;
     font-size: 14px;
