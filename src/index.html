@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ice cream</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -44,8 +45,8 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-
     <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
+
     <include src="./partials/Hero header.html"></include>
     <script src="./index.js" type="module"></script>
     <include src="./partials/products.html"></include>
@@ -55,6 +56,8 @@
     <include src="./partials/customer-reviews.html"></include>
     <include src="./partials/contacts.html"></include>
     <include src="./partials/how-it-made-modal.html"></include>
+    <include src="./partials/modal-products.html"></include>
+
     <include src="./partials/footer.html"></include>
 
     <!-- Skrypt jest na samym dole kodu. On juz ma w sobie podłączony SAAS plik. -->
@@ -69,6 +72,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/mobile-product.js"></script>
     <script src="./js/swiper.js"></script>
+    <script src="./js/modal-fran.js"></script>
   </body>
 </html>

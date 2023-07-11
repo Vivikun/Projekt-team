@@ -1,37 +1,35 @@
 <header>
   <div class="container container--header">
-    
     <nav class="header">
-     
-        <a class="header__svg">
-          <svg class="header__icon" width="40" height="37">
-            <use href="./images/header-logo.svg#icon-Logo-header"></use>
-          </svg>
-        </a>
-        <button
-          type="button"
-          class="toggle-btn js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg class="toggle-btn__icon" width="32" height="32">
-            <use href="./images/icons-svg.svg#icon-menu-hambburger"></use>
-          </svg>
-        </button>
-    
+      <a class="header__svg">
+        <svg class="header__icon" width="40" height="37">
+          <use href="./images/header-logo.svg#icon-Logo-header"></use>
+        </svg>
+      </a>
+      <button
+        type="button"
+        class="toggle-btn js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="toggle-btn__icon" width="32" height="32">
+          <use href="./images/icons-svg.svg#icon-menu-hambburger"></use>
+        </svg>
+      </button>
+
       <ul class="header__list">
         <li><a class="header__link" href="#">Home</a></li>
         <li><a class="header__link" href="#">How it's made?</a></li>
         <li><a class="header__link" href="#">Our products</a></li>
         <li><a class="header__link" href="#">Contacts</a></li>
       </ul>
-  
+
       <button class="modal-btn modal-btn--modal-open" type="button" data-modal-open>
         Buy now >
       </button>
     </nav>
 
-    <section class="section section--header">
+    <div class="section--header">
       <div class="header2">
         <h1 class="header2__title">
           ice cream <br />
@@ -41,13 +39,13 @@
 
         <ul class="header2__list">
           <li class="header2__number">16</li>
-          <li class="header2__item">cafes</li>
+          <li class="header2__item"><div class="header2__item-gap">cafes</div></li>
           <li class="header2__number">23</li>
           <li class="header2__item">food trucks</li>
         </ul>
       </div>
       <!-- <section class="section--background"> -->
-      <div class="container container--background-Hero">
+      <div class="container--background-Hero">
         <div class="links">
           <input
             type="button"
@@ -128,9 +126,21 @@
               alt="rożek z gałkami lodów"
             />
           </picture>
+          <!-- <svg class="header3__icon-mobile-left" width="107" height="34">
+            <use href="./images/icons-svg.svg#icon-kropki-mobile-left"></use>
+          </svg>
+          <svg class="header3__icon-mobile-right" width="126" height="49">
+            <use href="./images/icons-svg.svg#icon-kropki-mobile-right"></use>
+          </svg>
+          <svg class="header3__icon-tablet-left" width="110" height="34">
+            <use href="./images/icons-svg.svg#icon-kropki-tablet-left"></use>
+          </svg>
+          <svg class="header3__icon-tablet-right" width="182" height="68">
+            <use href="./images/icons-svg.svg#icon-kropki-tablet-right"></use>
+          </svg> -->
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </header>
 
