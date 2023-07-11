@@ -1,5 +1,16 @@
 <header>
   <div class="container container--header">
+    <div class="points">
+      <svg class="points__desktop" width="1200" height="383">
+        <use href="./images/points_mobile_tablet.svg#icon-kropki_desktop"></use>
+      </svg>
+      <svg class="points__tablet" width="768" height="68">
+        <use href="./images/points_mobile_tablet.svg#icon-kropki_tablet"></use>
+      </svg>
+      <svg class="points__mobile" width="320" height="49">
+        <use href="./images/points_mobile_tablet.svg#icon-kropki_mobile"></use>
+      </svg>
+    </div>
     <nav class="header">
       <a class="header__svg">
         <svg class="header__icon" width="40" height="37">
@@ -25,7 +36,10 @@
       </ul>
 
       <button class="modal-btn modal-btn--modal-open" type="button" data-modal-open>
-        Buy now >
+        Buy now
+        <svg class="modal-btn__button-icon" width="12" height="12">
+          <use href="./images/icons-svg.svg#icon-arrow-right-bold"></use>
+        </svg>
       </button>
     </nav>
 
@@ -46,6 +60,7 @@
       </div>
       <!-- <section class="section--background"> -->
       <div class="container--background-Hero">
+        
         <div class="links">
           <input
             type="button"
@@ -126,18 +141,6 @@
               alt="rożek z gałkami lodów"
             />
           </picture>
-          <!-- <svg class="header3__icon-mobile-left" width="107" height="34">
-            <use href="./images/icons-svg.svg#icon-kropki-mobile-left"></use>
-          </svg>
-          <svg class="header3__icon-mobile-right" width="126" height="49">
-            <use href="./images/icons-svg.svg#icon-kropki-mobile-right"></use>
-          </svg>
-          <svg class="header3__icon-tablet-left" width="110" height="34">
-            <use href="./images/icons-svg.svg#icon-kropki-tablet-left"></use>
-          </svg>
-          <svg class="header3__icon-tablet-right" width="182" height="68">
-            <use href="./images/icons-svg.svg#icon-kropki-tablet-right"></use>
-          </svg> -->
         </div>
       </div>
     </div>
@@ -147,7 +150,7 @@
 <div class="menu-container js-menu-container" id="mobile-menu">
   <div class="nav-mobile">
     <a href="#">
-      <svg class="header__icon" width="60" height="65">
+      <svg class="nav-mobile__icon" width="60" height="65">
         <use href="./images/header-logo.svg#icon-Logo-header"></use>
       </svg>
     </a>
@@ -164,7 +167,10 @@
     <li><a href="" class="mobile-menu__link">Contacts</a></li>
   </ul>
   <button class="modal-btn modal-btn--modal-open modal-btn--mobile" type="button" data-modal-open>
-    Buy now >
+    Buy now
+    <svg class="modal-btn__button-icon" width="12" height="12">
+      <use href="./images/icons-svg.svg#icon-arrow-right-bold"></use>
+    </svg>
   </button>
 </div>
 <script

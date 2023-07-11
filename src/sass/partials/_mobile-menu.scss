@@ -16,6 +16,11 @@
         border: none;
         top: 20px;
         right: 20px;
+
+        @include tablet {
+        top: 32px;
+        right: 32px;
+    }
     }
     &__icon-btn {
         fill: #FCFCFC;
@@ -28,7 +33,22 @@
         flex-direction: row;
         justify-content: space-between;
         text-align: justify;
-    }
+    &__icon {
+        width: 40px;
+        height: 37px;
+        margin: 12px 0 0 32px;
+
+        @include phone {
+        width: 48px;
+        height: 44px;
+        margin: 20px 0 0 20px;
+        }
+
+        @include tablet {
+        margin: 20px 0 0 32px;
+        }
+        }
+        }
     .mobile-menu {
         display: flex;
         flex-direction: column;
