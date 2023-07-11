@@ -4,7 +4,7 @@
  */
 
 // Style dla pliku z przykładem HTML fragmentu
-@import './partials/products';
+
 @import './mixin';
 @import './setup';
 @import './utils/var';
@@ -13,6 +13,7 @@
 @import './partials/modal-location';
 @import './partials/modal-franchise';
 @import './partials/opinions';
+@import './partials/products';
 @import './partials/contacts';
 @import './partials/modal-how-it-made';
 @import './partials/header';

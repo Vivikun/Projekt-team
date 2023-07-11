@@ -28,30 +28,34 @@ $colors: (
     @content;
   }
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  outline: none;
-}
-body {
+.bg-products {
+  padding-top: 60px;
   font-family: $mainfont, sans-serif;
   color: getColor(mainfontColor);
-}
-section {
-  padding-top: 60px;
-  background-image: url(../images/products/Backgroud1Mobile.jpg);
+  background-image: url(../images/backgrounds/backgroudMobile@x1.jpg);
   background-position: center;
+  background-size: cover;
   background-repeat: repeat;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/backgrounds/backgroudMobile@x2.jpg);
+  }
+  @include tablet {
+    background-image: url(../images/backgrounds/backgroundTablet@x1.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/backgrounds/backgroundTablet@x2.jpg);
+    }
+  }
+  @include desktop {
+    background-image: url(../images/backgrounds/backgroudDesktop@x1.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/backgrounds/backgroudDesktop@x2.jpg);
+    }
+  }
 }
-ul {
-  list-style: none;
-}
-
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 320px;
+  max-width: 480px;
 
   @include tablet {
     max-width: 768px;
@@ -81,13 +85,13 @@ ul {
     font-weight: 400;
     letter-spacing: 1.2px;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 140px;
 
     @include tablet {
-      margin-bottom: 80px;
+      margin-bottom: 180px;
     }
     @include desktop {
-      margin-bottom: 120px;
+      margin-bottom: 271px;
     }
   }
 }
@@ -95,8 +99,10 @@ ul {
 .desserts {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 160px;
   margin: 0 auto;
+  margin-bottom: 60px;
+  list-style: none;
 
   @include tablet {
     gap: 16px;
@@ -108,7 +114,6 @@ ul {
 
   &__item {
     position: relative;
-    height: 100%;
     max-width: 280px;
     min-height: 480px;
     border-radius: 24px;
@@ -137,24 +142,15 @@ ul {
     background-color: getColor(orangebackground);
   }
 
-  &__img {
-    max-width: 200px;
-    max-height: 200px;
-
-    @include tablet {
-      margin-bottom: 16px;
-    }
-    @include desktop {
-      margin-bottom: 30px;
-    }
-  }
-
   &__card {
-    position: relative;
+    padding-top: 123px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+
+    @include desktop {
+      padding-top: 165px;
+    }
   }
 
   &__card-title {
@@ -167,7 +163,7 @@ ul {
   }
 
   &__card-txt {
-    padding: 0 40px 0 40px;
+    padding: 0 40px;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
@@ -175,18 +171,112 @@ ul {
     letter-spacing: 0.56px;
 
     @include tablet {
-      padding: 0 26px 0 26px;
+      padding: 0 26px;
+    }
+    @include desktop {
+      padding: 0 64px;
+      font-size: 16px;
     }
   }
 
   &__card-btn {
     position: absolute;
-    top: 224px;
+    bottom: 16px;
     border: none;
     background-color: transparent;
 
-    @include mobile {
-      top: 198px;
+    @include tablet {
+      bottom: 12px;
+    }
+    @include desktop {
+      bottom: 60px;
+    }
+  }
+
+  &__card-icon {
+    width: 40px;
+    height: 16px;
+  }
+
+  .shape {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include desktop {
+      width: 302;
+      height: 302;
+    }
+  }
+  .shape::after {
+    content: '';
+    position: absolute;
+    bottom: 11px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include desktop {
+      bottom: 16px;
+      width: 302;
+      height: 302;
+    }
+  }
+
+  .img-icecream {
+    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7) 0%, rgba(156, 190, 143, 0.7) 100%),
+      #d9d9d9;
+    box-shadow: 0px 8px 30px 0px rgba(10, 136, 23, 0.25);
+  }
+  .img-icecream::after {
+    background-image: url(../images/products/ice-creamMobileTablet@x1.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../images/products/ice-creamMobileTablet@x2.png);
+    }
+    @media (min-width: 1200px) {
+      background-image: url(../images/products/Ice-creamDesktop@x1.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/products/ice-creamDesktop@x2.png);
+      }
+    }
+  }
+  .img-coffie {
+    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7) 0%, rgba(248, 210, 78, 0.7) 100%),
+      #d9d9d9;
+    box-shadow: 0px 8px 30px 0px rgba(153, 114, 23, 0.25);
+  }
+  .img-coffie::after {
+    background-image: url(../images/products/ice-coffeeMobileTablet@x1.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../images/products/ice-coffeeMobileTablet@x2.png);
+    }
+    @media (min-width: 1200px) {
+      background-image: url(../images/products/ice-coffeeDesktop@x1.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/products/ice-coffeeDesktop@x2.png);
+      }
+    }
+  }
+  .img-milkshakes {
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7) 0%, rgba(213, 117, 63, 0.7) 100%),
+      #d9d9d9;
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+  }
+  .img-milkshakes::after {
+    background-image: url(../images/products/milkshakeMobileTablet@x1.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../images/products/milkshakeMobileTablet@x2.png);
+    }
+    @media (min-width: 1200px) {
+      background-image: url(../images/products/milkshakeDesktop@x1.png);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url(../images/products/milkshakeDesktop@x2.png);
+      }
     }
   }
 }
