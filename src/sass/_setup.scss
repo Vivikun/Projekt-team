@@ -71,6 +71,7 @@ input {
 
 .container {
   max-width: 480px;
+  min-width: 320px;
   @include tablet {
     max-width: 768px;
   }
