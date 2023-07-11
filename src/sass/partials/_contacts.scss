@@ -90,11 +90,9 @@
     font-weight: 500;
     line-height: 183%;
     letter-spacing: 0.48px;
+
     // border-bottom: 1px solid #e1e1e1;
-    // :focus,
-    // :hover {
-    //   text-decoration: underline;
-    // }
+
     @include tablet {
       gap: 12px;
       margin-top: 32px;
@@ -151,6 +149,7 @@
     font-weight: 500;
     line-height: 186%;
     letter-spacing: 0.48px;
+
     @include tablet {
       font-size: 14px;
     }
@@ -158,6 +157,11 @@
       font-size: 16px;
     }
   }
+  .address:hover {
+    cursor: url(../images/Cursor.png), auto;
+    text-decoration-line: underline;
+  }
+
   .days {
     color: #131313;
   }
@@ -169,6 +173,7 @@
     }
   }
 }
+
 .buttons {
   display: flex;
   flex-direction: column;
