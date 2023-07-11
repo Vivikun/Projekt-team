@@ -54,6 +54,7 @@
       font-weight: 700;
       gap: 28px;
       color: getColor('primary');
+      transition-property: color;
       transition-duration: getColor('transition-duration');
       transition-timing-function: getColor('timing-function');
     }
