@@ -7,7 +7,9 @@ body {
   font-family: DM Sans, Seymour One, Montserrat;
   background-color: map-get($colors, 'background');
 }
-
+section {
+  padding-top: 60px;
+}
 h1,
 h2,
 h3,
