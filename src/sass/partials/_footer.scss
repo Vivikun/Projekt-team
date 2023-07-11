@@ -1,270 +1,135 @@
-@import '../mixin';
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
 
-
-footer {
-    min-width: 320px;
-    width: 100vw;
-    flex-shrink: 0;
-    background: getColor('background');
-    display: block;
-    padding-top: 935px;
+  @include tablet {
+    padding-left: 33px;
+    padding-right: 32px;
+  }
+  @include desktop {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  &__hedling {
+    color: getColor('text');
+    font-family: Montserrat;
+    width: 232px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    @include tablet {
+      font-size: 25px;
+      letter-spacing: 1.04px;
+      max-width: 352px;
+      margin-bottom: 8px;
+    }
+    @include desktop {
+      font-size: 30px;
+      letter-spacing: 1.2px;
+      margin-bottom: 14px;
+    }
+  }
+  &__text {
+    color: getColor('text');
+    font-family: Montserrat;
+    width: 200px;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.48px;
+    text-transform: uppercase;
+    @include tablet {
+      font-size: 48px;
+      letter-spacing: 2.88px;
+      max-width: 352px;
+    }
+    @include desktop {
+      font-size: 58px;
+      letter-spacing: 3.48px;
+    }
+  }
+  &__contacts {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 186%;
 
     @include tablet {
-      height: 625px;
-      padding-top: 360px;
-      position: relative;
+      font-size: 14px;
+      letter-spacing: 0.32px;
     }
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+  &__text-2 {
+    color: getColor('footer');
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 152%;
 
-    .footer_container {
+    @include tablet {
+      font-size: 14px;
+      letter-spacing: 0.28px;
+      line-height: 186%;
+    }
+    @include desktop {
+      font-size: 12px;
+      letter-spacing: 0.24px;
+    }
+  }
+  &__tel {
+    color: getColor('background_address');
+  }
+  &__social {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    margin-bottom: 20px;
+    @include tablet {
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__box {
+    margin-right: auto;
+    margin-top: 60px;
+    @include tablet {
+      margin-top: 40px;
+    }
+    @include desktop {
+      margin-top: 120px;
+    }
+  }
+  &__box2 {
+    margin-top: 60px;
+    margin-left: auto;
+    @include tablet {
+      margin-top: 101px;
+    }
+    @include desktop {
+      margin-top: 132px;
+    }
+  }
+  &__list {
+    border-top: 1px solid getColor('border_footer');
+    text-align: center;
+    width: 100%;
+    margin-top: 60px;
+    padding-block: 12px;
+
+    @include tablet {
       display: flex;
-      flex-wrap: wrap;
-      width: 100%;
       justify-content: center;
-      align-items: center;
-
-      &__item {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: right;
-
-        @include tablet {
-          width: 50%;
-        }
-
-        &--content {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: left;
-          color: #FCFCFC;
-          font-family: "Montserrat";
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          text-transform: uppercase;
-          margin-top: 60px;
-          margin-bottom: 60px;
-
-          @include tablet {
-            height: 183px;
-            width: 352px;
-            justify-content: space-between;
-          }
-
-          @include desktop {
-            width: 100%;
-            justify-content: left;
-          }
-
-          span {
-            width: 232px;
-            height: 42px;
-            font-size: 18px;
-            
-            @include tablet{
-              font-size: 26px;
-              width: 100%;
-              height: 57px;
-            }
-
-            @include desktop {
-              font-size: 30px;
-              font-weight: 400;
-              line-height: normal;
-              letter-spacing: 1.2px; 
-            }
-          }
-
-          p {
-            width: 200px;
-            height: 76px;
-            font-size: 34px;
-            letter-spacing: 1.36px;
-            margin-top: 16px;
-
-            @include tablet{
-              font-size: 48px;
-              height: auto;
-            }
-
-            @include desktop {
-              font-size: 57px;
-              width: 497px;
-              letter-spacing: 3.48px; 
-              font-style: normal;
-              font-weight: 700;
-              line-height: normal; 
-            }
-          }
-        }
-      
-        &--icons {
-          width: 142px;
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 20px;
-
-          @include tablet {
-            align-items: center;
-          }
-
-          svg {
-            width: 34px;
-            height: 34px;
-          }
-        }
-
-        &--contacts {
-          width: 100%;
-          display: flex;
-          justify-content: right;
-          font-family: "Montserrat";
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 186%;
-          
-          @include tablet {
-            align-items: center;
-          }
-
-          span {
-            color: #131313;
-          }
-
-          a {
-            color: rgba(252, 252, 252, 1);
-          }
-        }
-      }
-
-      &--line {
-        width: 100%;
-        stroke-width: 1px;
-        height: 1px;
-        stroke: #E1E1E1;
-        margin-top: 20px;
-
-        // path, symbol, use {
-        //   width: 300px;
-        //   height: 1px;
-        // }
-      }
-        
-      &__rights {
-          display: flex;
-          justify-content: center;
-          width: 280px;
-          height: 42px;
-          flex-direction: column;
-          flex-shrink: 0;
-          margin-top: 20px;
-          margin-bottom: 20px;
-
-          @include tablet {
-            width: 298px;
-            flex-direction: row;
-          }
-          
-          @include desktop {
-            width: 255px;
-            height: 20px;
-          }
-
-          p {
-            width: 100%;
-            color: #7A7A7A;
-            text-align: center;
-            font-family: "Montserrat";
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 152%;
-
-            @include desktop {
-              color: #7A7A7A;
-              font-size: 12px;
-              line-height: 186%;
-              letter-spacing: 0.24px;
-              width: auto;
-            }
-          }
-      }
-    } 
+      margin-top: 32px;
+    }
+    @include desktop {
+      margin-top: 60px;
+    }
+  }
 }
-//     @media screen and (min-width: 480px) {
-//     }
-//     @media screen and (min-width: 768px) {
-//     }
-  
-//     @media screen and (min-width: 1200px) {
-//     }
-
-    
-    
-  
-//     .footer_container__button {
-//       width: 196px;
-//       height: 42px;
-//       flex-shrink: 0;
-//       background-color: antiquewhite;
-//       margin-left: auto;
-//       margin-right: auto;
-//     }
-//     .footer_container__button:nth-child(2) {
-//       margin-top: 16px;
-//     }
-  
-//     .footer_container__text {
-//       display: flex;
-//       width: 232px;
-//       height: 42px;
-//       flex-direction: column;
-//       flex-shrink: 0;
-//       margin-left: 22px;
-//       margin-top: 60px;
-  
-//       &--motto_1 {
-//         color: #FCFCFC;
-//         font-family: "Montserrat";
-//         font-size: 18px;
-//         font-style: normal;
-//         font-weight: 700;
-//         line-height: normal;
-//         text-transform: uppercase;
-//       }
-//     }
-  
-//       .footer_container__main {
-//         display: flex;
-//         width: 200px;
-//         height: 76px;
-//         flex-direction: column;
-//         flex-shrink: 0;
-//         margin-left: 20px;
-//         margin-top: 16px;
-  
-//         &--motto_2 {
-//             color: #FCFCFC;
-//             font-family: Montserrat;
-//             font-size: 34px;
-//             font-style: normal;
-//             font-weight: 700;
-//             line-height: normal;
-//             letter-spacing: 1.36px;
-//             text-transform: uppercase;
-//         }
-//       }
-
-//       @media screen and (min-width: 768px) {
-//       }
-  
-//     @media screen and (min-width: 1200px) {
-//       }
-
-//     .footer_container__line {}
-  
-//     .footer_container__rights {}
-// }
-  
