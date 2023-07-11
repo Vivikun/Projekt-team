@@ -5,6 +5,12 @@
     modal: document.querySelector('[data-modal]'),
   };
 
+	const refs = {
+		openModalBtn: document.querySelector("[data-modal-open-fran]"),
+		closeModalBtn: document.querySelector("[data-modal-close]"),
+		modal: document.querySelector("[data-modal-fran]"),
+	};
+
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 

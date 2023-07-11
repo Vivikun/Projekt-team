@@ -17,7 +17,7 @@
 .grid-container {
   display: grid;
   justify-content: center;
-  // margin-top: -349px;
+  margin-top: -409px;
   gap: 16px;
   grid-template-columns: 280px;
   grid-template-rows: 1fr 1fr 1fr;
@@ -25,13 +25,13 @@
     grid-template-columns: 224px 224px 224px;
     grid-template-rows: 100%;
 
-    // margin-top: -299px;
+    margin-top: -359px;
   }
   @include desktop {
     grid-template-columns: 368px 368px 368px;
     grid-template-rows: 100%;
     gap: 32px;
-    // margin-top: -128px;
+    margin-top: -188px;
   }
 }
 .item {
@@ -53,6 +53,7 @@
   }
 }
 .contacts {
+  background: getColor('background');
   max-width: 100%;
   margin: 0 auto;
 
@@ -89,7 +90,9 @@
     font-weight: 500;
     line-height: 183%;
     letter-spacing: 0.48px;
+
     // border-bottom: 1px solid #e1e1e1;
+
     @include tablet {
       gap: 12px;
       margin-top: 32px;
@@ -146,6 +149,7 @@
     font-weight: 500;
     line-height: 186%;
     letter-spacing: 0.48px;
+
     @include tablet {
       font-size: 14px;
     }
@@ -153,6 +157,11 @@
       font-size: 16px;
     }
   }
+  .address:hover {
+    cursor: url(../images/Cursor.png), auto;
+    text-decoration-line: underline;
+  }
+
   .days {
     color: #131313;
   }
@@ -164,6 +173,7 @@
     }
   }
 }
+
 .buttons {
   display: flex;
   flex-direction: column;
