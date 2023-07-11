@@ -3,7 +3,9 @@
 body {
   font-size: 14px;
   color: map-get($colors, 'body');
+  font-family: Montserrat, sans-serif;
   font-family: DM Sans, Seymour One, Montserrat;
+  background-color: map-get($colors, 'background');
 }
 
 h1,
@@ -35,6 +37,13 @@ address {
   font-style: normal;
 }
 
+textarea,
+input {
+  border-radius: 10px;
+  border: 1px solid #84a178;
+  background: rgba(248, 210, 78, 0.1);
+}
+
 .conteiner {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -53,19 +62,22 @@ address {
   margin: 0 auto;
   padding: 12px 34px;
 }
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  .container {
-    max-width: 480px;
-    @include tablet {
-      max-width: 768px;
-    }
-    @include desktop {
-      max-width: 1200px;
-    }
-    margin: 0 auto;
-    padding: 0 15px;
+}
+
+.container {
+  max-width: 480px;
+  min-width: 320px;
+  @include tablet {
+    max-width: 768px;
   }
+  @include desktop {
+    max-width: 1200px;
+  }
+  margin: 0 auto;
+  padding: 0 15px;
 }

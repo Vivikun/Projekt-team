@@ -1,6 +1,38 @@
-<section class="opinions">
+<section class="opinions" id="customer-reviews">
   <div class="container">
     <!-- Slider main container -->
+    <picture>
+      <source
+        srcset="
+          ./images/gallery/photo-1-Mobile@x1.png 1x,
+          ./images/gallery/photo-1-Mobile@x2.png 2x
+        "
+        media="(max-width: 479px)"
+      />
+      <source
+        srcset="./images/gallery/photo-1-480@x1.png 1x, ./images/gallery/photo-1-480@x2.png 2x"
+        media="(min-width: 480px) and (max-width:767px)"
+      />
+      <source
+        srcset="
+          ./images/gallery/photo-1-Tablet@x1.png 1x,
+          ./images/gallery/photo-1-Tablet@x2.png 2x
+        "
+        media="(min-width: 768px) and (max-width:1199px)"
+      />
+      <source
+        srcset="
+          ./images/gallery/photo-1-Desktop@x1.png 1x,
+          ./images/gallery/photo-1-Desktop@x2.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <img
+        class="opinions__gallery"
+        alt="our ice cream gallery"
+        src="./images/gallery/photo-1-Mobile@x1.png"
+      />
+    </picture>
     <div class="swiper mySwiper">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
@@ -9,10 +41,10 @@
           <ul class="opinions__list">
             <li>
               <img
-                scrset="./images/customers/customer-lady@x2.png 2x,./images/customers/customer-lady@x1.png 1x"
-                src="./images/customers/customer-lady@x1.png"
                 alt="customer lady picture"
                 class="opinions__picture1"
+                src="./images/customers/customer-lady@x1.png"
+                scrset="./images/customers/customer-lady@x2.png 2x,./images/customers/customer-lady@x1.png 1x"
               />
             </li>
             <li>
@@ -28,11 +60,11 @@
           <ul class="opinions__list">
             <li>
               <img
+                class="opinions__picture2"
+                alt="customer lady picture"
+                src="./images/customers/customer-men@x1.png"
                 scrset="./images/customers/customer-men@x1.png 1x,
                 ./images/customers/customer-men@x2.png 2x"
-                src="./images/customers/customer-men@x1.png"
-                alt="customer lady picture"
-                class="opinions__picture2"
               />
             </li>
             <li>
@@ -48,11 +80,11 @@
           <ul class="opinions__list">
             <li>
               <img
+                class="opinions__picture3"
+                alt="customer lady picture"
+                src="./images/customers/customer-girl@x1.png"
                 scrset="./images/customers/customer-girl@x1.png 1x,
                 ./images/customers/customer-girl@x2.png 2x"
-                src="./images/customers/customer-girl@x1.png"
-                alt="customer lady picture"
-                class="opinions__picture3"
               />
             </li>
             <li>
@@ -70,13 +102,4 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.mySwiper', {
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-  </script>
 </section>

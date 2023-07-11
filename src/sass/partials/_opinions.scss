@@ -9,27 +9,55 @@
   @include desktop {
     max-width: 1200px;
   }
-  height: 600px;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.swiper-pagination {
+  position: relative;
+}
 .swiper-pagination-bullet {
   background: map-get($colors, 'background');
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .opinions {
-  &__gallery {
-    width: 450px;
-    height: 400px;
-    background: url(../images/gallery/photo-1-480@x1.png),
-      lightgray -22.284px -61.252px / 112.943% 160.051% no-repeat;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-y;
+  max-width: 767px;
+  padding-bottom: 409px;
+  background-image: url(/src/images/backgrounds/backgroudMobile@x1.jpg);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(/src/images/backgrounds/backgroudMobile@x2.jpg);
   }
+
+  @include tablet {
+    min-width: 768px;
+    max-width: 1199px;
+    padding-bottom: 379px;
+    background-position: 50% 50%;
+    background-image: url(/src/images/backgrounds/backgroundTablet@x1.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/src/images/backgrounds/backgroundTablet@x2.jpg);
+    }
+  }
+  @include desktop {
+    min-width: 1200px;
+    max-width: 1600px;
+    background-position: 50% 50%;
+    padding-bottom: 228px;
+    background-image: url(/src/images/backgrounds/backgroudDesktop@x1.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/src/images/backgrounds/backgroudDesktop@x2.jpg);
+    }
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -37,6 +65,7 @@
     gap: 32px;
   }
   &__paragraph {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     max-width: 280px;
     @include tablet {
       max-width: 705px;
@@ -72,24 +101,31 @@
     }
   }
   &__picture1 {
+    background: lightgray -16px -5.49px / 129.412% 194.094% no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     width: 85px;
     height: 85px;
     border: 1px solid transparent;
     border-radius: 50%;
   }
   &__picture2 {
+    background: lightgray -16px -5.49px / 129.412% 194.094% no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     width: 97px;
     height: 91px;
     border: 1px solid transparent;
     border-radius: 50%;
   }
   &__picture3 {
+    background: lightgray -16px -5.49px / 129.412% 194.094% no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     width: 91px;
     height: 94px;
     border: 1px solid transparent;
     border-radius: 50%;
   }
   &__header {
+    filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.1));
     color: map-get($colors, 'body');
     text-align: center;
     font-family: Montserrat;
@@ -100,5 +136,51 @@
     @include tablet {
       font-size: 16px;
     }
+    margin-bottom: 32px;
   }
+  &__gallery {
+    margin-top: -92px;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin-bottom: 80px;
+    @media screen and (min-width: 480px) {
+      margin-top: -109px;
+    }
+    @include tablet {
+      margin-bottom: 100px;
+      margin-top: -204px;
+    }
+    @include desktop {
+      margin-bottom: 140px;
+      margin-top: -158px;
+    }
+  }
+  // .gallery {
+  // margin: 0 auto;
+  // background-image: url(../images/Backgroud_mobile@1x.jpg);
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: repeat-y;
+  // padding-bottom: 200px;
+  // max-width: 767px;
+  // display: flex;
+  // justify-content: center;
+
+  //     @include tablet {
+  //     min-width: 768px;
+  //     max-width: 1199px;
+  //     background-size: cover;
+  //     background-position: 50% 50%;
+  //     padding-bottom: 350px;
+  //     background-image: url(../images/Background_tablet@1x.jpg);
+  //     }
+  //     @include desktop {
+  //     background-size: cover;
+  //     min-width: 1200px;
+  //     max-width: 1600px;
+  //     background-position: 50% 50%;
+  //     padding-bottom: 450px;
+  //     background-image: url(../images/Backgroud_desktop@1x.jpg);
+  //     }
+  // }
 }

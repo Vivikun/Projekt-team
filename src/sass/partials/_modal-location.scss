@@ -15,7 +15,7 @@
 
   align-items: center;
 
-  margin-bottom: 2em;
+  // margin-bottom: 2em;
 
   padding: 28px 30px;
 
@@ -31,11 +31,29 @@
   }
 
   &__title {
-    margin-bottom: 20px;
     font-family: Seymour One;
     @include font(400, 16px, 1.5);
   }
   &__picture {
-    margin-bottom: 20px;
+    margin: 20px 0;
+    @media (min-width: 768px) {
+      margin: 32px 0;
+    }
   }
 }
+// .modal-location__picture {
+//   width: 224px;
+//   height: 199px;
+//   background-image: url(../../images/modals/map-mobile.jpg);
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   @media screen and (min-width: 1200px) {
+//     width: 568px;
+//     height: 458px;
+//     background-image: url(../../images/modals/map-deskop.jpg);
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+// }

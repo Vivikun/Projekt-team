@@ -1,23 +1,29 @@
-<div class="modal-container is-hidden" data-modal>
+<!-- <button class="submit-button" type="button" data-modal-open-fran>Franczyza</button> -->
+<div class="modal-container is-hidden" data-modal-fran>
   <div class="franchise-container">
-    <button type="button" class="franchise-button__close" data-modal-close>X</button>
+    <button type="button" class="franchise-button__close" data-modal-close>
+      <svg width="24" height="24" class="modal-him__button--icon">
+        <use href="./images/icons-svg.svg#icon-close-black"></use>
+      </svg>
+    </button>
     <div class="franchise__title">
       <h2 class="franchise__title--font">
         Thank you for your interest in owning an Ice Cream shop
       </h2>
     </div>
     <div class="franchise__describe">
-      <span class="franchise__describe--text"
-        >Due to the overwhelming volume of franchise requests we are not accepting new franchisee
+      <p class="franchise__describe--text">
+        Due to the overwhelming volume of franchise requests we are not accepting new franchisee
         applications at this time. Once the application process resumes, we will contact you for
         further information. Please fill out the contact information below and we will reach out for
-        additional information. We appreciate your patience.</span
-      >
+        additional information. We appreciate your patience.
+      </p>
     </div>
 
     <form class="franchise-modal">
-      <label class="franchise-modal__label label" for="name"
+      <label class="franchise-modal__label label" for="name" id="modal"
         ><input
+          id="modal"
           class="franchise-modal__input"
           type="text"
           name="name"
@@ -27,8 +33,9 @@
           title="Username must be two words separated by space."
         />
       </label>
-      <label class="label franchise-modal__label" for="phone"
+      <label class="label franchise-modal__label" for="phone" id="modal-1"
         ><input
+          id="modal-1"
           class="franchise-modal__input"
           type="tel"
           name="phone-number"
@@ -37,18 +44,21 @@
           placeholder="Number"
           required
       /></label>
-      <label class="label franchise-modal__label" for="email-address"
+      <label class="label franchise-modal__label" for="email-address" id="modal-2"
         ><input
+          id="modal-2"
           class="franchise-modal__input"
           type="email"
           pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
           placeholder="Email"
           required
       /></label>
-      <label class="label franchise-modal__label" class="form__label">
+      <label class="label franchise-modal__label" class="form__label" id="modal-3">
         <textarea
+          id="modal-3"
           class="franchise-modal__input--comment"
           name="comment"
+          rows="6"
           placeholder="Comment"
         ></textarea>
       </label>
