@@ -1,76 +1,76 @@
 .menu-container.is-open {
-    transform: translateX(0);
+  transform: translateX(0);
+  z-index: 10;
 }
 .menu-container {
-    background-color:  #85A279;
-    position: fixed;
-    inset: 0;
-    max-width: 768px;
-    width: 100%;
-    transform: translateX(-100%);
-    transition: transform 250ms ease-in;
-    
-    &__close-btn {
-        position: absolute;
-        background-color: transparent;
-        border: none;
-        top: 20px;
-        right: 20px;
+  background-color: #85a279;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform 250ms ease-in;
 
-        @include tablet {
-        top: 32px;
-        right: 32px;
-    }
-    }
-    &__icon-btn {
-        fill: #FCFCFC;
-        width: 32px;
-        height: 32px;
-    }
-        }
-    .nav-mobile {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: justify;
-    &__icon {
-        width: 40px;
-        height: 37px;
-        margin: 12px 0 0 32px;
+  &__close-btn {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 20px;
+    right: 20px;
 
-        @include phone {
-        width: 48px;
-        height: 44px;
-        margin: 20px 0 0 20px;
-        }
-
-        @include tablet {
-        margin: 20px 0 0 32px;
-        }
-        }
-        }
-    .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-top: 47px;
-        gap: 32px;
-
-       @include tablet {
-        gap: 40px;
-        padding-top: 76px;
-       } 
-    &__link {
-        color: #FCFCFC;
-        
-        font-family: Montserrat;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        &:hover,
-        &:focus{
-            color:#131313;
-        }
+    @include tablet {
+      top: 32px;
+      right: 32px;
     }
+  }
+  &__icon-btn {
+    fill: #fcfcfc;
+    width: 32px;
+    height: 32px;
+  }
+}
+.nav-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: justify;
+  &__icon {
+    width: 40px;
+    height: 37px;
+    margin: 12px 0 0 32px;
+
+    @include phone {
+      width: 48px;
+      height: 44px;
+      margin: 20px 0 0 20px;
+    }
+
+    @include tablet {
+      margin: 20px 0 0 32px;
+    }
+  }
+}
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 47px;
+  gap: 32px;
+
+  @include tablet {
+    gap: 40px;
+    padding-top: 76px;
+  }
+  &__link {
+    color: #fcfcfc;
+
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    &:hover,
+    &:focus {
+      color: #131313;
+    }
+  }
 }

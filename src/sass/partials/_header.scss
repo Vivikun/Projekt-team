@@ -169,7 +169,8 @@
   height: 42px;
   align-items: center;
   justify-content: center;
-  margin: 110px 84px 0 84px;
+  margin: 0 auto;
+  margin-top: 110px;
   border-radius: 10px;
   background-color: getColor('primary');
   color: getColor('button_advantages');
@@ -191,7 +192,8 @@
   }
 
   @include phone {
-    margin: 114px 164px 88px 164px;
+    margin: 0 auto;
+    margin-top: 114px;
   }
   @include tablet {
     display: none;
