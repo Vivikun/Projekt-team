@@ -12,17 +12,21 @@
     padding-left: 16px;
     padding-right: 16px;
   }
-
+  &__icon {
+    border-radius: 42px;
+    background: getColor('primary');
+    width: 100%;
+    height: 34px;
+    display: inherit;
+  }
   &__svg {
-    fill: getColor('text');
+    fill: getColor('background');
+    padding: 6px;
     &:hover {
       fill: getColor('text');
     }
     &:focus {
       fill: getColor('text');
-    }
-    &:disabled {
-      fill: getColor('time-color');
     }
   }
   &__hedling {
