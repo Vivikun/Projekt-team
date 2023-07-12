@@ -12,8 +12,9 @@
     padding-left: 16px;
     padding-right: 16px;
   }
+
   &__svg {
-    fill: getColor('primary');
+    fill: getColor('text');
     &:hover {
       fill: getColor('text');
     }
@@ -21,7 +22,7 @@
       fill: getColor('text');
     }
     &:disabled {
-      fill: getColor('text');
+      fill: getColor('time-color');
     }
   }
   &__hedling {
