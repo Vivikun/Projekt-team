@@ -20,7 +20,6 @@
 .container--background-Hero {
   background: none;
   margin: 0 auto;
-  
 }
 
 .points {
@@ -402,13 +401,6 @@
     &:hover {
       border: 2px solid getColor('background-header');
     }
-    &:focus {
-      color: getColor('background_address');
-      border: 2px solid getColor('background-header');
-    }
-    &:disabled {
-      border: 2px solid getColor('time-color');
-    }
   }
   &__made {
     width: 154px;
@@ -428,12 +420,6 @@
     transition-timing-function: getColor('timing-function');
     &:hover {
       color: getColor('background-header');
-    }
-    &:focus {
-      color: getColor('background_address');
-    }
-    &:disabled {
-      color: getColor('time-color');
     }
 
     @include phone {
